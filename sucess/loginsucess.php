@@ -1,3 +1,7 @@
+<?php session_start();
+
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +42,8 @@
         <circle fill="none" stroke="#ffffff" stroke-width="5" stroke-miterlimit="10" cx="109.486" cy="104.353" r="32.53" />
       </svg>
                         <h3 id='status'>
-                           Success
+                        <strong>Welcome <br>  <p style="color:black;" >  <?php echo($_SESSION['uname'])
+                           ?> </strong>
                         </h3>
                     </div>
                     <div id='lower-side'>
@@ -47,7 +52,7 @@
                         </p>
                         <a href="../login.php" id="contBtn">exit</a>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     </div>

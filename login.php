@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html lang="zxx">
 
@@ -91,6 +92,7 @@
 <body>
 
 <?php
+session_start();
 include 'action_page.php';
 
 $username = $password = "";
@@ -110,7 +112,7 @@ if (isset($_POST['login']) && !empty($_POST['uname']) && !empty($_POST['psw'])) 
     if ($count == 1) {
         if ($row['uname'] == $username || $row['psw'] == $pw) {
             $_SESSION['uname'] = $username;
-
+            
             header('location:sucess/loginsucess.php');
         }
         
